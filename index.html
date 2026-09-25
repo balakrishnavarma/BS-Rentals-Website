@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS Self Drive Car Rentals</title>
+    <meta name="description"
+        content="Premium self drive car rentals. Choose from premium hatchbacks, sedans, SUVs, and luxury cars at affordable prices.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Using Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 1. NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-bs">BS</span>
+                <div class="logo-text">
+                    <span class="logo-line1">SELF DRIVE</span>
+                    <span class="logo-line2">CAR RENTALS</span>
+                </div>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#fleet">Our Fleet</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#offers">Offers</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact Us</a>
+            </nav>
+
+            <div class="nav-right">
+                <a href="tel:7981372766" class="phone-link">
+                    <i class="fa-solid fa-phone"></i> 7981372766
+                </a>
+                <button class="btn btn-outline" id="loginBtn">Login</button>
+                <button class="btn btn-primary" id="signupBtn">Sign Up</button>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-menu" id="closeMenu" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="mobile-nav-links">
+            <a href="#home">Home</a>
+            <a href="#fleet">Our Fleet</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#offers">Offers</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+            <a href="tel:7981372766" class="mobile-phone"><i class="fa-solid fa-phone"></i> 7981372766</a>
+            <div class="mobile-auth">
+                <button class="btn btn-outline w-full" id="mobileLoginBtn">Login</button>
+                <button class="btn btn-primary w-full" id="mobileSignupBtn">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Drive Your <br><span class="text-blue">Dream Car</span> Today</h1>
+                <p>Choose from premium hatchbacks, sedans, SUVs, and luxury cars at affordable prices.</p>
+                <div class="hero-buttons">
+                    <a href="#booking" class="btn btn-primary btn-large">Book Now</a>
+                    <a href="#fleet" class="btn btn-outline btn-large">Explore Cars</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. CAR SEARCH / BOOKING BAR -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <div class="booking-card">
+                <form id="searchForm" class="booking-form">
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-location-dot"></i> Pickup City</label>
+                        <select name="city" required>
+                            <option value="" disabled selected>Select City</option>
+                            <!--  <option value="mumbai">Mumbai</option>
+                            <option value="delhi">Delhi</option>  
+                            <option value="bangalore">Bangalore</option>
+                            <option value="hyderabad">Hyderabad</option>
+                            <option value="chennai">Chennai</option>  -->
+                            <option value="Vijayawada">Vijayawada</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fa-regular fa-calendar"></i> Pickup Date</label>
+                        <input type="date" id="pickupDate" name="pickupDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fa-regular fa-clock"></i> Pickup Time</label>
+                        <input type="time" name="pickupTime" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fa-regular fa-calendar"></i> Return Date</label>
+                        <input type="date" id="returnDate" name="returnDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fa-regular fa-clock"></i> Return Time</label>
+                        <input type="time" name="returnTime" required>
+                    </div>
+
+                    <div class="form-group submit-group">
+                        <button type="submit" class="btn btn-primary btn-search w-full">Search Cars</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. STATISTICS BAR -->
+    <section class="statistics">
+        <div class="container stats-container">
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fa-solid fa-car"></i></div>
+                <h3>500+</h3>
+                <p>Cars</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fa-solid fa-face-smile"></i></div>
+                <h3>10,000+</h3>
+                <p>Happy Customers</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                <h3>25+</h3>
+                <p>Locations</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fa-solid fa-headset"></i></div>
+                <h3>24/7</h3>
+                <p>Customer Support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FEATURED CARS -->
+    <section id="fleet" class="featured-cars">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Cars</h2>
+                <a href="#fleet" class="view-all" id="viewAllBtn">View All Cars <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="car-grid">
+                <!-- Car Card 1 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/swift.png" alt="Swift" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Swift</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fa-solid fa-gear"></i> Manual</span>
+                            <span><i class="fa-solid fa-user-group"></i> 5 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹1,299</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 2 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/dzire.png" alt="Dzire" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Dzire</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fa-solid fa-gear"></i> Manual</span>
+                            <span><i class="fa-solid fa-user-group"></i> 5 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹1,399</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 3 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/baleno.png" alt="Baleno" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Baleno</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fa-solid fa-gear"></i> Manual</span>
+                            <span><i class="fa-solid fa-user-group"></i> 5 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹1,349</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 4 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/i20.png" alt="i20" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Hyundai i20</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fa-solid fa-gear"></i> Manual</span>
+                            <span><i class="fa-solid fa-user-group"></i> 5 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹1,399</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 5 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/fronx.png" alt="Fronx" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Fronx</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fa-solid fa-gear"></i> Automatic</span>
+                            <span><i class="fa-solid fa-user-group"></i> 5 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹1,499</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 6 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/ertiga.png" alt="Ertiga" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Ertiga</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fa-solid fa-gear"></i> Manual</span>
+                            <span><i class="fa-solid fa-user-group"></i> 7 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹1,899</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 7 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/crysta.png" alt="Crysta" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Innova Crysta</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Diesel</span>
+                            <span><i class="fa-solid fa-gear"></i> Manual</span>
+                            <span><i class="fa-solid fa-user-group"></i> 7 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹2,499</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Car Card 8 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/ciaz.png" alt="Ciaz" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Ciaz</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fa-solid fa-gear"></i> Manual</span>
+                            <span><i class="fa-solid fa-user-group"></i> 5 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹1,599</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Car Card 9 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/thar.png" alt="Thar" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Mahindra Thar</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Diesel</span>
+                            <span><i class="fa-solid fa-gear"></i> Manual</span>
+                            <span><i class="fa-solid fa-user-group"></i> 4 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹2,999</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Car Card 10 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/glanza.png" alt="Glanza" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Toyota Glanza</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fa-solid fa-gear"></i> Automatic</span>
+                            <span><i class="fa-solid fa-user-group"></i> 5 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹1,399</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 11 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/xl6.png" alt="XL6" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Maruti XL6</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fa-solid fa-gear"></i> Automatic</span>
+                            <span><i class="fa-solid fa-user-group"></i> 6 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹1,999</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Car Card 12 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/punch.png" alt="Punch" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Tata Punch</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fa-solid fa-gear"></i> Manual</span>
+                            <span><i class="fa-solid fa-user-group"></i> 5 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹1,299</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 13 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/venue.png" alt="Venue" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Hyundai Venue</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fa-solid fa-gear"></i> Automatic</span>
+                            <span><i class="fa-solid fa-user-group"></i> 5 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹1,599</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 14 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/rapid.png" alt="Rapid" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Skoda Rapid</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fa-solid fa-gear"></i> Automatic</span>
+                            <span><i class="fa-solid fa-user-group"></i> 5 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹1,799</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 15 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/astor.png" alt="Astor" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">MG Astor</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fa-solid fa-gear"></i> Automatic</span>
+                            <span><i class="fa-solid fa-user-group"></i> 5 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹1,899</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 16 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/hycross.png" alt="Hycross" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Innova Hycross</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Hybrid</span>
+                            <span><i class="fa-solid fa-gear"></i> Automatic</span>
+                            <span><i class="fa-solid fa-user-group"></i> 7 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹3,499</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 17 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/xuv700.png" alt="XUV700" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Mahindra XUV700</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Diesel</span>
+                            <span><i class="fa-solid fa-gear"></i> Automatic</span>
+                            <span><i class="fa-solid fa-user-group"></i> 7 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹2,999</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 18 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/brezza.png" alt="Brezza" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Maruti Brezza</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fa-solid fa-gear"></i> Automatic</span>
+                            <span><i class="fa-solid fa-user-group"></i> 5 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹1,599</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 19 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/scorpion.png" alt="Scorpio N" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Scorpio N</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Diesel</span>
+                            <span><i class="fa-solid fa-gear"></i> Automatic</span>
+                            <span><i class="fa-solid fa-user-group"></i> 7 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹2,799</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Card 20 -->
+                <div class="car-card">
+                    <div class="car-image-container">
+                        <img src="assets/cars/scorpioclassic.png" alt="Scorpio Classic" class="car-img" loading="lazy">
+                    </div>
+                    <div class="car-details">
+                        <h3 class="car-name">Scorpio Classic</h3>
+                        <div class="car-specs">
+                            <span><i class="fa-solid fa-gas-pump"></i> Diesel</span>
+                            <span><i class="fa-solid fa-gear"></i> Manual</span>
+                            <span><i class="fa-solid fa-user-group"></i> 7 Seats</span>
+                        </div>
+                        <div class="car-footer">
+                            <div class="car-price">
+                                <span class="price-amount">₹2,499</span> / day
+                            </div>
+                            <button class="btn btn-primary book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. WHY CHOOSE US -->
+    <section id="about" class="why-choose-us">
+        <div class="container">
+            <h2 class="text-center section-title">Why Choose Us</h2>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-route"></i></div>
+                    <h4>Unlimited Freedom</h4>
+                    <p>Drive anywhere, anytime</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+                    <h4>Sanitized Vehicles</h4>
+                    <p>100% hygienic & safe</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-tags"></i></div>
+                    <h4>Affordable Pricing</h4>
+                    <p>Best prices in the market</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h4>Insurance Included</h4>
+                    <p>Your safety is our priority</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-truck-medical"></i></div>
+                    <h4>Roadside Assistance</h4>
+                    <p>24/7 support</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                    <h4>Zero Hidden Charges</h4>
+                    <p>Transparent billing</p>
+                </div>
+
+                <!-- Feature 7 -->
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h4>Easy Online Booking</h4>
+                    <p>Book in just 2 minutes</p>
+                </div>
+
+                <!-- Feature 8 -->
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-location-crosshairs"></i></div>
+                    <h4>GPS Enabled Cars</h4>
+                    <p>Track your journey</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo footer-logo">
+                        <span class="logo-bs text-white">BS</span>
+                        <div class="logo-text">
+                            <span class="logo-line1 text-white">SELF DRIVE</span>
+                            <span class="logo-line2 text-white">CAR RENTALS</span>
+                        </div>
+                    </a>
+                    <p>Premium self-drive car rentals for your everyday needs and special journeys.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#fleet">Our Fleet</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#about">About Us</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fa-solid fa-envelope"></i> info@bscarrentals.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 7981372766 </p>
+                    <p><i class="fa-solid fa-location-dot"></i> Mumbai, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BS Self Drive Car Rentals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 7. WHATSAPP BUTTON -->
+    <a href="https://wa.me/917981372766" target="_blank" id="whatsappBtn" class="whatsapp-btn"
+        aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- 8. MODALS -->
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeLogin">&times;</span>
+            <h2>Welcome Back</h2>
+            <p>Please login to your account.</p>
+            <form id="loginForm">
+                <div class="form-group modal-form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group modal-form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-full">Login</button>
+                <div class="modal-footer-text">
+                    Don't have an account? <a href="#" id="switchToSignup">Sign up here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeSignup">&times;</span>
+            <h2>Create Account</h2>
+            <p>Join us to book your dream car.</p>
+            <form id="signupForm">
+                <div class="form-group modal-form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group modal-form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group modal-form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Create a password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-full">Sign Up</button>
+                <div class="modal-footer-text">
+                    Already have an account? <a href="#" id="switchToLogin">Login here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
