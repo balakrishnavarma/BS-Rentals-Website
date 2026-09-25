@@ -19,35 +19,28 @@
 <body>
 
     <!-- 1. NAVBAR -->
-    <header class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <span class="logo-bs">BS</span>
-                <div class="logo-text">
-                    <span class="logo-line1">SELF DRIVE</span>
-                    <span class="logo-line2">CAR RENTALS</span>
-                </div>
-            </a>
-
-            <nav class="nav-links">
-                <a href="#home" class="active">Home</a>
-                <a href="#fleet">Our Fleet</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#offers">Offers</a>
-                <a href="#about">About Us</a>
-                <a href="#contact">Contact Us</a>
+    <header class="navbar template-navbar" id="navbar">
+        <div class="container nav-container" style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;">
+            
+            <!-- Left Links -->
+            <nav class="nav-links" style="justify-content: flex-start; gap: 1.5rem;">
+                <a href="#about" style="color: #111;">About</a>
+                <a href="#fleet" style="color: #111;">Cars</a>
+                <a href="#contact" style="color: #111;">Contact</a>
             </nav>
 
-            <div class="nav-right">
-                <a href="tel:7981372766" class="phone-link">
-                    <i class="fa-solid fa-phone"></i> 7981372766
-                </a>
-                <button class="btn btn-outline" id="loginBtn">Login</button>
-                <button class="btn btn-primary" id="signupBtn">Sign Up</button>
+            <!-- Center Logo -->
+            <a href="#" class="logo" style="justify-content: center;">
+                <h1 style="font-size: 1.8rem; font-weight: 500; color: #111; letter-spacing: -0.5px; margin: 0;">BS Rentals</h1>
+            </a>
+
+            <!-- Right Button -->
+            <div class="nav-right" style="justify-content: flex-end;">
+                <a href="#booking" class="btn" style="background-color: #111; color: #fff; border-radius: 0; padding: 0.8rem 2rem;">Book Now</a>
             </div>
 
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <i class="fa-solid fa-bars"></i>
+            <button class="hamburger" id="hamburger" aria-label="Menu" style="display: none;">
+                <i class="fa-solid fa-bars" style="color: #111;"></i>
             </button>
         </div>
     </header>
@@ -58,30 +51,22 @@
             <i class="fa-solid fa-xmark"></i>
         </button>
         <div class="mobile-nav-links">
-            <a href="#home">Home</a>
-            <a href="#fleet">Our Fleet</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#offers">Offers</a>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact Us</a>
-            <a href="tel:7981372766" class="mobile-phone"><i class="fa-solid fa-phone"></i> 7981372766</a>
-            <div class="mobile-auth">
-                <button class="btn btn-outline w-full" id="mobileLoginBtn">Login</button>
-                <button class="btn btn-primary w-full" id="mobileSignupBtn">Sign Up</button>
-            </div>
+            <a href="#about">About</a>
+            <a href="#fleet">Cars</a>
+            <a href="#contact">Contact</a>
+            <a href="#booking" class="btn w-full" style="background-color: #111; color: white; margin-top:1rem; border-radius: 0;">Book Now</a>
         </div>
     </div>
 
     <!-- 2. HERO SECTION -->
-    <section id="home" class="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <h1>Drive Your <br><span class="text-blue">Dream Car</span> Today</h1>
-                <p>Choose from premium hatchbacks, sedans, SUVs, and luxury cars at affordable prices.</p>
-                <div class="hero-buttons">
-                    <a href="#booking" class="btn btn-primary btn-large">Book Now</a>
-                    <a href="#fleet" class="btn btn-outline btn-large">Explore Cars</a>
-                </div>
+    <section id="home" class="hero irving-hero" style="background: url('assets/cars/thar.png') no-repeat center center / cover; background-color: #333; background-blend-mode: overlay; min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative;">
+        <!-- Dark overlay for better text contrast -->
+        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5);"></div>
+        
+        <div class="container hero-container" style="position: relative; z-index: 1;">
+            <div class="hero-content" style="max-width: 800px; margin: 0 auto;">
+                <h1 style="font-size: 4.5rem; font-family: 'Times New Roman', serif; font-weight: 400; color: #fff; margin-bottom: 1rem; line-height: 1.1;">Where the journey is yours.</h1>
+                <p style="font-size: 1.25rem; font-family: 'Times New Roman', serif; color: #f0f0f0;">Welcome to the city's finest premium self-drive rentals.</p>
             </div>
         </div>
     </section>
@@ -621,34 +606,27 @@
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h4>Insurance Included</h4>
-                    <p>Your safety is our priority</p>
-                </div>
-
-                <!-- Feature 5 -->
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
                     <div class="feature-icon"><i class="fa-solid fa-truck-medical"></i></div>
                     <h4>Roadside Assistance</h4>
                     <p>24/7 support</p>
                 </div>
 
-                <!-- Feature 6 -->
+                <!-- Feature 5 -->
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
                     <h4>Zero Hidden Charges</h4>
                     <p>Transparent billing</p>
                 </div>
 
-                <!-- Feature 7 -->
+                <!-- Feature 6 -->
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
                     <h4>Easy Online Booking</h4>
                     <p>Book in just 2 minutes</p>
                 </div>
 
-                <!-- Feature 8 -->
+                <!-- Feature 7 -->
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-icon"><i class="fa-solid fa-location-crosshairs"></i></div>
                     <h4>GPS Enabled Cars</h4>
@@ -657,6 +635,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer>
@@ -676,14 +655,13 @@
                     <h4>Quick Links</h4>
                     <a href="#home">Home</a>
                     <a href="#fleet">Our Fleet</a>
-                    <a href="#pricing">Pricing</a>
                     <a href="#about">About Us</a>
                 </div>
                 <div class="footer-contact">
                     <h4>Contact Us</h4>
                     <p><i class="fa-solid fa-envelope"></i> info@bscarrentals.com</p>
                     <p><i class="fa-solid fa-phone"></i> 7981372766 </p>
-                    <p><i class="fa-solid fa-location-dot"></i> Mumbai, India</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Vijayawada, Andhra Pradesh</p>
                 </div>
             </div>
             <div class="footer-bottom">
