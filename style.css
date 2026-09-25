@@ -968,3 +968,150 @@ footer {
         gap: 2rem;
     }
 }
+
+
+
+/* =========================================
+   AI SAAS THEME OVERRIDES
+   ========================================= */
+
+:root {
+  --primary: #8b5cf6 !important;
+  --blue: #a855f7 !important;
+  --light-blue: rgba(168, 85, 247, 0.15) !important;
+  --white: #09090b !important;
+  --text: #f8fafc !important;
+  --text-light: #94a3b8 !important;
+  --gray-100: rgba(255, 255, 255, 0.03) !important;
+  --gray-200: rgba(255, 255, 255, 0.08) !important;
+  --gray-300: rgba(255, 255, 255, 0.15) !important;
+  
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+  --shadow-md: 0 0 20px rgba(168, 85, 247, 0.2) !important;
+  --shadow-lg: 0 0 40px rgba(168, 85, 247, 0.3) !important;
+}
+
+body {
+    background-color: var(--white);
+    background-image: radial-gradient(circle at 50% 0%, #2e1065 0%, #09090b 40%);
+    background-repeat: no-repeat;
+    color: var(--text);
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+/* Gradient Texts */
+.text-blue, .logo-line1, .section-title {
+    background: linear-gradient(to right, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.logo-line2 { color: #f8fafc !important; }
+
+/* Glassmorphism Navbar */
+.navbar {
+    background-color: rgba(9, 9, 11, 0.6) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--gray-200) !important;
+}
+
+/* Gradient Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%) !important;
+    border: none;
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4) !important;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #9333ea 0%, #db2777 100%) !important;
+    box-shadow: 0 6px 20px rgba(236, 72, 153, 0.6) !important;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border-color: #a855f7 !important;
+    color: #a855f7 !important;
+}
+
+.btn-outline:hover {
+    background-color: rgba(168, 85, 247, 0.1) !important;
+}
+
+/* Glassmorphism Cards */
+.booking-card, .car-card, .feature-card, .stat-item, .modal-content, .mobile-menu {
+    background-color: var(--gray-100) !important;
+    border: 1px solid var(--gray-200) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+}
+
+.car-card:hover, .feature-card:hover {
+    border-color: rgba(168, 85, 247, 0.5) !important;
+    box-shadow: var(--shadow-md) !important;
+    transform: translateY(-5px);
+}
+
+/* Form Inputs */
+input, select {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid var(--gray-200) !important;
+    color: var(--text) !important;
+}
+
+input:focus, select:focus {
+    border-color: #a855f7 !important;
+    box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.2) !important;
+    outline: none;
+}
+
+/* Logo */
+.logo-bs {
+    background: linear-gradient(135deg, #a855f7, #ec4899) !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.5);
+}
+
+/* Hero Section */
+.hero { background: none; }
+.hero h1 { font-weight: 800; letter-spacing: -1px; }
+.hero p { color: var(--text-light) !important; }
+
+/* Footer */
+footer {
+    background-color: #050505 !important;
+    border-top: 1px solid var(--gray-200);
+}
+
+.footer-logo .logo-bs {
+    background: #09090b !important;
+    border: 1px solid #a855f7 !important;
+}
+
+.car-specs span {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid var(--gray-200) !important;
+}
+
+/* Modal text */
+.modal-content h2, .form-group label {
+    color: var(--text);
+}
+
+/* Mobile Nav */
+.mobile-nav-links a { color: var(--text-light); }
+.close-menu { color: var(--text); }
+.mobile-nav-links a:hover { color: #a855f7; }
+
+/* Fixes for dark mode text visibility */
+.car-name, .price-amount, .stat-item h3 {
+    color: var(--text);
+}
+.car-price, .stat-item p, .feature-card p, .car-specs {
+    color: var(--text-light);
+}
+
