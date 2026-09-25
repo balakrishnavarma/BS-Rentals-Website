@@ -973,9 +973,9 @@ footer {
 
 
 
-.template-navbar { background-color: #fff !important; padding: 1rem 0; box-shadow: none !important; border-bottom: 1px solid #eee; }
+.template-navbar { background-color: transparent !important; position: absolute; top: 0; left: 0; width: 100%; z-index: 100; border-bottom: none !important; padding: 1rem 0; box-shadow: none !important; border-bottom: 1px solid #eee; }
 .template-navbar a { font-family: "Inter", sans-serif; }
-.irving-hero { margin-top: 80px; }
+.irving-hero { margin-top: 0; }
 
 /* IRVING SQAURESPACE TWEAKS */
 .booking-section { background-color: #fff; padding: 4rem 0; border-top: 1px solid #000; border-bottom: 1px solid #000; margin-top: 0; }
