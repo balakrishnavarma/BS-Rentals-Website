@@ -108,8 +108,22 @@ bookBtns.forEach(btn => {
         };
         localStorage.setItem('currentBooking', JSON.stringify(bookingDetails));
         
-        // Show success message
-        alert(`You have selected ${carName} at ${carPrice}/day. Proceeding to booking details...`);
+        // Form data integration for WhatsApp message
+        const city = searchForm.city.value;
+        const pDate = pickupDate.value;
+        const pTime = searchForm.pickupTime.value;
+        const rDate = returnDate.value;
+        const rTime = searchForm.returnTime.value;
+        
+        let message = `Hi BS Self Drive Car Rentals,\n\nI want to book the *${carName}* (${carPrice}/day).`;
+        if(city && pDate && rDate) {
+            message += `\n\n*Booking Details:*\nCity: ${city}\nPickup: ${pDate} at ${pTime}\nReturn: ${rDate} at ${rTime}`;
+        } else {
+            message += `\n\nPlease let me know if it is available.`;
+        }
+        
+        const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER.replace('+', '')}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
     });
 });
 
